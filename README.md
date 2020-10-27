@@ -1,5 +1,12 @@
 # Glofox_DataEngineer_Task
 
+## Table of contents
+* [Introduction](#introduction)
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+
+## Introduction
 The test is completed in python language. The file named "Glofox_Test.py" is uploaded in the repository which contains the solution of the coding challenge.
 To test the functionality of the code some testing files are uploaded in the "Testing_Files" folder. All the files are with '.txt' extension mentioned for the original datasets.
 The code is tested on the original datasets as well but just to include test cases I have attached the test files.
