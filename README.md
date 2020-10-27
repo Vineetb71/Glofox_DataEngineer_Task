@@ -5,6 +5,8 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Algorithms](#algorithms)
+
 
 ### Introduction
 A simple job developed in python 3.0 which provides you with a word dictionary and an inverted index based on a collection of documents.
@@ -29,5 +31,10 @@ Task is created with:
 * 'Glofox_Test.py' is the executable file for spyder or jupyter notebook which is included in the repository.
 * All these text files and the 'Glofox_Test.py' file should be placed in the same directory on local machine so that it can be executed without much changes in the   path of directory required in the code.
 
+### Algorithms
 
-
+To develop the dictonary and inverted index simultaneously, a combination of `Blocked sort-based indexing`(BSBI)  and `Single-pass in-memory indexing` (SPIMI)
+is used. 
+BSBI is used to map the word with word_id and create a word dictonary while SPIMI is used to create a single flow in which word_id from the dictonary is mapped to the doc_id of the dataset. So during each successive call of SPIMI-INVERT, when a term occurs for the first time, it is added to the dictionary and a new postings list is created which will assign the current_doc_id to the word_id, instead of fetching the word, the word_id is mapped to the doc_id which is prime requirement 
+of the task resulitng in final inverted index.
+This process is fast enough and no such sorting is required while mapping as we are iterating through the indexes and appending them which are already sorted.
