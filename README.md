@@ -21,7 +21,7 @@ Task is created with:
 
 * Python version: 3.0
 * Testing .txt files created in sublime text.
-* Tools used : Jupyter notebook and spyder to code and execute the python script
+* Tools used : spyder 3.3.6 to code and execute the python script
 
 ### Setup
 * Any tool such as spyder/Pycharm can be used to run the python script.
@@ -35,8 +35,9 @@ Task is created with:
 ### Algorithms
 
 To develop the dictonary and inverted index simultaneously, a combination of `Blocked sort-based indexing`(BSBI)  and `Single-pass in-memory indexing` (SPIMI)
-is used. 
-BSBI is used to map the word with word_id and create a word dictionary while SPIMI is used to create a single flow in which word_id from the dictionary is mapped to the doc_id of the dataset. So during each successive call of SPIMI-INVERT, when a term occurs for the first time, it is added to the dictionary and a new postings list is created through which the current_doc_id is assgined to the current_word_id, instead of fetching the word, the word_id is mapped to the doc_id or list of doc_id's which is prime requirement of the task resulitng in final inverted index.
+is used. Now what is an inverted index ?
+An inverted index is basically an index data structure storing a mapping from content, such as words or word_id's, to its locations in a document or a set of documents. It directs us from a word to a document or list of documents. In this task a `record-level inverted index` is used which contains a list of references to documents for each word.
+So to achieve the above BSBI is used to map the word with word_id and create a word dictionary while SPIMI is used to create a single flow in which word_id from the dictionary is mapped to the doc_id of the dataset. So during each successive call of SPIMI, when a term occurs for the first time, it is added to the dictionary and a new postings list is created which contains the current_doc_id. This id is then assigned to the current_word_id, instead of fetching the word, the word_id is mapped to the doc_id or list of doc_id's which is prime requirement of the task resulting in final inverted index.
 This process is fast enough and no such sorting is required while mapping as we are iterating through the indexes and appending them which are already sorted.
  
 ### Extra Features
