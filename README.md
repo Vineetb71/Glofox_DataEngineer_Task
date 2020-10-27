@@ -21,7 +21,7 @@ Task is created with:
 
 * Python version: 3.0
 * Testing .txt files created in sublime text.
-* Tools used : Jupyter notebook and spyder to execute the python script
+* Tools used : Jupyter notebook and spyder to code and execute the python script
 
 ### Setup
 * Any tool such as spyder/Pycharm can be used to run the python script.
