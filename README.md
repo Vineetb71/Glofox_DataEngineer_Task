@@ -36,10 +36,9 @@ Task is created with:
 
 To develop the dictonary and inverted index simultaneously, a combination of `Blocked sort-based indexing`(BSBI)  and `Single-pass in-memory indexing` (SPIMI)
 is used. 
-BSBI is used to map the word with word_id and create a word dictonary while SPIMI is used to create a single flow in which word_id from the dictonary is mapped to the doc_id of the dataset. So during each successive call of SPIMI-INVERT, when a term occurs for the first time, it is added to the dictionary and a new postings list is created which will assign the current_doc_id to the word_id, instead of fetching the word, the word_id is mapped to the doc_id which is prime requirement 
-of the task resulitng in final inverted index.
+BSBI is used to map the word with word_id and create a word dictonary while SPIMI is used to create a single flow in which word_id from the dictionary is mapped to the doc_id of the dataset. So during each successive call of SPIMI-INVERT, when a term occurs for the first time, it is added to the dictionary and a new postings list is created through which the current_doc_id is assgined to the current_word_id, instead of fetching the word, the word_id is mapped to the doc_id or list of doc_id's which is prime requirement of the task resulitng in final inverted index.
 This process is fast enough and no such sorting is required while mapping as we are iterating through the indexes and appending them which are already sorted.
-
+ 
 ### Extra Features
 
 * Additionally User interaction is added in the job. User has to enter a word which needs to be searched once word is entered the result will be displayed on screen   like : if the user is present in the dictonary or not. If it is present the word and corresponding id will be displayed plus for each word inverted matrix will     also be displayed stating the word_id and in which doc_id's the word is present.
