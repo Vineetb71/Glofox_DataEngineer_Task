@@ -7,6 +7,10 @@
 * [Setup](#setup)
 
 ## Introduction
+A simple job developed in python 3.0 which provides you with a word dictionary and an inverted index based on a collection of documents.
+
+## General info
+
 The test is completed in python language. The file named "Glofox_Test.py" is uploaded in the repository which contains the solution of the coding challenge.
 To test the functionality of the code some testing files are uploaded in the "Testing_Files" folder. All the files are with '.txt' extension mentioned for the original datasets.
 The code is tested on the original datasets as well but just to include test cases I have attached the test files.
