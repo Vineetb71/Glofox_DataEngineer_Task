@@ -44,5 +44,5 @@ This process is fast enough and no such sorting is required while mapping as we 
 
 * Additionally User interaction is added in the job. User has to enter a word which needs to be searched once word is entered the result will be displayed on screen   like : if the user is present in the dictonary or not. If it is present the word and corresponding id will be displayed plus for each word inverted index will     also be displayed stating the word_id and in which doc_id's the word is present.
 * Web app can be created by python flask or django framework so that only the app should be run on the screen and user can play along with app searching for their     word without having any interaction with the code just the UI for them.
-* The stop words like 'is','are','the','am' etc. can also be removed programatically from the dictomary if required.
+* The stop words like 'is','are','the','am' etc. can also be removed programatically from the dictionary if required.
 
