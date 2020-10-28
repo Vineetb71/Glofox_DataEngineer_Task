@@ -20,7 +20,7 @@ The basic criteria behind this job is to build an inverted index which maps ever
 Task is created with:
 
 * Python version: 3
-* Testing `.txt` files created in sublime text.
+* `.txt` files for testing are created in sublime text.
 * Tools used : spyder 3.3.6 to code and execute the python script
 
 ### Setup
